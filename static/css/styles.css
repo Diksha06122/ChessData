@@ -1,0 +1,137 @@
+body{
+    background-color: #1e1e1e;
+    color: #EEE;
+    padding: 0px;
+    margin: 0px;
+}
+
+#the-body-div{
+    background-color: #1e1e1e96;
+}
+
+#heading-div, #main-window{
+    text-align: center;
+    display: block;
+}
+
+#heading-div{
+    background-color: #1e1e1e;
+}
+
+#the-head{
+    display: inline-block;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+
+#main-div{
+    user-select: none;
+    display: inline-block;
+}
+
+#head-label{
+    user-select: none;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+
+#main-div{
+    background-color: #1e1e1e;
+    border: 2px solid #EEE;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+#input-tag{
+    user-select: none;
+    margin-top: 25px;
+    padding: 10px 0px 10px 10px;
+    background-color: #eeeeee00;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    font-size: larger;
+    color: #EEE;
+}
+
+#btn-show-data{
+    user-select: none;
+    background-color: #EEE;
+    color: #1e1e1e;
+    padding: 9px 20px 9px 20px;
+    margin-top: 15px;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    transition: padding 0.5s, background-color 0.5s, border 0.5s, color 0.5s;
+}
+#btn-show-data:hover{
+    padding: 9px 40px 9px 40px;
+    background-color: #1e1e1e;
+    color: #EEE;
+}
+#btn-show-data:active{
+    background-color: #EEE;
+    color: #1e1e1e;
+    padding: 9px 20px 9px 20px;
+}
+
+#form-div{
+    text-align: start ;
+    margin-top: 25px;
+}
+
+#chess-game-label{
+    user-select: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+#form-div-two{
+    margin-bottom: 15px;
+}
+
+table, th{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th, td{
+    padding: 15px;
+    text-align: center  ;
+}
+
+.profile-div{
+    display: none;
+    text-align: left;
+}
+.profile-div-two{
+    text-align: start;
+    display: flex;
+}
+
+#div-1{
+    margin: 20px;
+}
+#div-2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+img{
+    border: 1px solid #EEE;
+    border-radius: 10px;
+}
+
+span{
+    font-size: large;
+    margin: 2px;
+}
+
+#profile-data{
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 5px;
+}

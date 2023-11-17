@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Data</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body
+    style="background-image: url('/static/images/background.jpg '); background-repeat: no-repeat;background-size: cover;;">
+    <div id="the-body-div">
+        <header id="heading">
+            <div id="heading-div">
+                <h1 id="the-head">
+                    The Chess Data
+                </h1>
+                <hr>
+            </div>
+        </header>
+
+        <main id="main-window">
+            <div id="main-div">
+                <form method="POST">
+                    {% csrf_token %}
+                    <label id="head-label">Search Player Here</label><br>
+                    <input id="input-tag" type="text" name="username" placeholder="Enter Username" required
+                        autocomplete="off"><br>
+                    <input type="submit" value="Show Data" id="btn-show-data">
+                    <hr>
+                    <div class="{% if request.method == 'GET' %} profile-div {% else %} profile-div-two {% endif %}">
+                        <div id="div-1">
+                            <img src="{{ Profile }}" alt="profie-pic" width="100px" height="100x">
+                        </div>
+                        <div id="div-2">
+                            <pre id="profile-data">Username:  </pre><span>{{ Username }}</span><br>
+                            <pre id="profile-data">Name:  </pre><span>{{ Name }}</span><br>
+                            <pre id="profile-data">Followers:  </pre><span>{{ followers }}</span><br>
+                            <pre id="profile-data">League:  </pre><span>{{ League }}</span><br>
+                        </div>
+                    </div>
+                    <div id="form-div">
+                        <label id="chess-game-label">Rapid </label><span id="ratings">( rating {{Rapid.last.rating}})</span>
+                        <hr>
+                        <div id="form-div-two">
+                            <table>
+                                <tr>
+                                    <th>Total Win</th>
+                                    <th>Total Loss</th>
+                                    <th>Total Draw</th>
+                                </tr>
+                                <tr>
+                                    <td>{{Rapid.record.win}}</td>
+                                    <td>{{Rapid.record.loss}}</td>
+                                    <td>{{Rapid.record.draw}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <label id="chess-game-label">Bullet</label><span id="ratings">( rating {{Bullet.last.rating}})</span>
+                        <hr>
+                        <div id="form-div-two">
+                            <table>
+                                <tr>
+                                    <th>Total Win</th>
+                                    <th>Total Loss</th>
+                                    <th>Total Draw</th>
+                                </tr>
+                                <tr>
+                                    <td>{{Bullet.record.win}}</td>
+                                    <td>{{Bullet.record.loss}}</td>
+                                    <td>{{Bullet.record.draw}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <label id="chess-game-label">Blitz</label><span id="ratings">( rating {{Blitz.last.rating}})</span>
+                        <hr>
+                        <div id="form-div-two">
+                            <table>
+                                <tr>
+                                    <th>Total Win</th>
+                                    <th>Total Loss</th>
+                                    <th>Total Draw</th>
+                                </tr>
+                                <tr>
+                                    <td>{{Blitz.record.win}}</td>
+                                    <td>{{Blitz.record.loss}}</td>
+                                    <td>{{Blitz.record.draw}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
